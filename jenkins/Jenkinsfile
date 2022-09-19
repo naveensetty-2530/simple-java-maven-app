@@ -6,6 +6,14 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+        
+        
+        stage('ExecuteSonarQubeReport'){
+            steps{
+                sh  "mvn clean sonar:sonar"
+            }
+        }
+       
         stage('Test') {
             steps {
                 sh 'mvn test'
