@@ -30,4 +30,32 @@ pipeline {
             }
         }
     }
+    
+    post{
+	
+always{
+ emailext to: "${EMAIL_TO}",
+	  from: "${EMAIL_TO}",
+          subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          replyTo: "${EMAIL_TO}"
+ }
+/* 
+success{
+ emailext to: 'b.rams17011983@gmail.com',
+          subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          replyTo: 'b.rams17011983@gmail.com'
+ }
+ 
+ failure{
+ emailext to: 'b.rams17011983@gmail.com',
+          subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          replyTo: 'b.rams17011983@gmail.com'
+ }*/
+ 
+}
+    
+    
 }
