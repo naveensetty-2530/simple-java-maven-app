@@ -24,9 +24,9 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!--<sonar.host.url>http://192.168.20.56:9000/</sonar.host.url>-->
+    <sonar.host.url>http://192.168.20.192:9000/</sonar.host.url>
 		
-    <sonar.host.url>http://192.168.117.51:9000/</sonar.host.url>  
+     <!--<sonar.host.url>http://192.168.117.51:9000/</sonar.host.url>  -->
     <sonar.login>admin</sonar.login>
     <sonar.password>Ramesh@2005</sonar.password> 
 	  	  
