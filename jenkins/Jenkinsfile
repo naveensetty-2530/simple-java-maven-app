@@ -1,6 +1,7 @@
 pipeline {
 	environment {
 EMAIL_TO = 'tejatec27@gmail.com'
+EMAIL_FROM = 'b.rams@yahoo.com'
 }
 	
 	
@@ -40,7 +41,7 @@ EMAIL_TO = 'tejatec27@gmail.com'
 	
 always{
  emailext to: "${EMAIL_TO}",
-	  from: "${EMAIL_TO}",
+	  from: "${EMAIL_FROM}",
           subject: "Changed Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Changed Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           replyTo: "${EMAIL_TO}"
