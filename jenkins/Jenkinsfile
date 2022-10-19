@@ -1,6 +1,6 @@
 pipeline {
 	environment {
-EMAIL_TO = 'teccsec2020@gmail.com'
+EMAIL_TO = '20ne1a05g8@gmail.com'
 EMAIL_FROM = 'b.rams@yahoo.com'
 }
 	
