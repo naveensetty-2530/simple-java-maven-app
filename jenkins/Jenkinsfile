@@ -42,8 +42,8 @@ EMAIL_FROM = 'b.rams@yahoo.com'
 always{
  emailext to: "${EMAIL_TO}",
 	  from: "${EMAIL_FROM}",
-          subject: "Changed Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          body: "Changed Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}."
+          subject: "CSE B Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
+          body: "CSE B Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}."
 /* 	,
           replyTo: "${EMAIL_TO}" */
  }
