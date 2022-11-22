@@ -18,18 +18,8 @@ EMAIL_FROM = 'b.rams@yahoo.com'
             steps{
                 sh  "mvn clean sonar:sonar"
             }
-        }
-       
-	    
-	stage('QualityGate'){
-            steps {
-              /* timeout(time: 1, unit: 'HOURS') {
-                waitForQualityGate abortPipeline: true 
-              } */
-		echo 'hello'
-            }
-        }
-	    
+        }    
+	       
 	    
         stage('Test') {
             steps {
