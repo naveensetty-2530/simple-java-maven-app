@@ -24,9 +24,9 @@
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!--<sonar.host.url>http://192.168.20.56:9000/</sonar.host.url>-->
+    <sonar.host.url>http://192.168.220.51:9000/</sonar.host.url>
 		
-    <sonar.host.url>http://192.168.31.140:9000/</sonar.host.url>  
+     <!--<sonar.host.url>http://192.168.117.51:9000/</sonar.host.url>  -->
     <sonar.login>admin</sonar.login>
     <sonar.password>Ramesh@2005</sonar.password> 
 	  	  
@@ -120,6 +120,7 @@
 			</goals>
 			<configuration>
 				<!-- Sets the path to the file which contains the execution data. -->
+
 				<dataFile>target/jacoco.exec</dataFile>
 				<!-- Sets the output directory for the code coverage report. -->
 				<outputDirectory>target/jacoco-ut</outputDirectory>
