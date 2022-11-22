@@ -26,6 +26,7 @@ EMAIL_FROM = 'b.rams@yahoo.com'
               /* timeout(time: 1, unit: 'HOURS') {
                 waitForQualityGate abortPipeline: true 
               } */
+		echo 'hello'
             }
         }
 	    
