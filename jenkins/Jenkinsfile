@@ -22,15 +22,10 @@ EMAIL_FROM = 'b.rams@yahoo.com'
        
 	    
 	stage('QualityGate'){
-            steps{
-                timeout(time:1, unit:'HOURS')
-		    {
-			def qg = waitForQualityGate()
-			if(qg.status != 'OK')
-			    {
-			    error "Quality Gate Failed"
-			    }   
-		    }
+            steps {
+              timeout(time: 1, unit: 'HOURS') {
+                waitForQualityGate abortPipeline: true
+              }
             }
         }
 	    
