@@ -9,14 +9,14 @@ EMAIL_FROM = 'b.rams@yahoo.com'
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                bat 'mvn -B -DskipTests clean package'
             }
         }
         
         
         stage('ExecuteSonarQubeReport'){
             steps{
-                bat  "mvn clean sonar:sonar"
+                sh  "mvn clean sonar:sonar"
             }
         }    
 	       
