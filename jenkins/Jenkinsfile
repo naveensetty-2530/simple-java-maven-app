@@ -1,6 +1,6 @@
 pipeline {
 	environment {
-EMAIL_TO = 'tejatec27@gmail.com'
+EMAIL_TO = '20ne1a05g8@gmail.com'
 EMAIL_FROM = 'b.rams@yahoo.com'
 }
 	
@@ -9,7 +9,7 @@ EMAIL_FROM = 'b.rams@yahoo.com'
     stages {
         stage('Build') {
             steps {
-                bat 'mvn -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         
